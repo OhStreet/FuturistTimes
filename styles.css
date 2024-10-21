@@ -1,0 +1,237 @@
+/* css reset */
+body, header, nav, main {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*outline: 1px solid red;*/
+}
+
+/*gradient*/
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(#ffffff, #113c5c);
+    min-height: 100vh;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    text-align: center;
+    background-color: #6b8191;
+}
+
+nav ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+nav li {
+    display: block;
+    border-top: 1px solid #113c5c;
+    margin: 5px;
+    padding: 5px;
+}
+
+nav li a {
+    display: block;
+    text-align: center;
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+}
+
+nav li a:hover {
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    display: block;
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2em;
+    text-shadow: 1px 1px 0 #6b8191;
+}
+
+/*style rules for the grids*/
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+}
+
+.grid-container > div {
+    background-color: rgba(107, 129, 145, 0.5);
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px;
+    font-family: "Glegoo", serif;
+    font-weight: 500;
+    font-style: normal;
+    box-shadow: 5px 5px;
+    font-size: 0.75em;
+}
+
+/*pseudo class used on AI page*/
+.pstyle p:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.80);
+}
+
+/*Making videos responsive to size.*/
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Home page only needs one grid box */
+.home .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/*style rules for title*/
+.mobile {
+    display: block;
+    text-align: center;
+    font-family: "Jacquard 24", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5em;
+    background-color: #113c5c;
+    color: #ffffff;
+}
+.mobile h1 {
+    margin: 0%;
+    padding: 0%;
+    color: #ffffff;
+    text-shadow: 2px 2px 0 black;
+}
+
+.mobile h1 a {
+    text-decoration: none;
+}
+
+.mobile h1 a:visited {
+    color: #ffffff;
+}
+
+/* sizing images */
+.image1 img {
+    max-width: 90%;
+
+}
+
+.image2 img {
+    max-width: 90%;
+
+}
+
+.content1 img {
+    max-width: 90%;
+
+}
+
+.content2 img {
+    max-width: 90%;
+
+}
+
+footer {
+    background-color: #113c5c;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 620px) {
+    .grid-container > .content1 {
+        grid-column: span 2;
+    }
+    .grid-container > .image1 {
+        grid-column: span 2;
+    }
+    .re-entry .grid-container > .image2 {
+        grid-column: span 2;
+    }
+    header {
+        font-size: 2.5em;
+    }
+    nav li a {
+        font-size: 1.25em;
+    }
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1000px) {
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+
+    .grid-container > .content1,
+    .grid-container > .image1 {
+        grid-column: span 1;
+    }
+
+    /*re-aligning nav, changing font sizes*/
+    header {
+        font-size: 2.5em;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        display: inline;
+        border-top: none;
+    }
+
+    nav li a {
+        font-size: 2em;
+        padding: 10px 20px;
+    }
+
+    .re-entry .grid-container > .image1 {
+        padding: 100px;
+    }
+
+}
+
+
+/* Media Query for LARGE Desktop Viewports */
+@media screen and (min-width: 1920px) {
+    .grid-container {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+}
